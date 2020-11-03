@@ -4,10 +4,10 @@ const { UserInputError } = require('apollo-server');
 
 // we need to use destructuring because this is not the default export
 const { validateRegisterInput, validateLoginInput } = require('./../../util/validators');
-const { SECRET_KEY } = require('./../../config');
+// const { SECRET_KEY } = require('./../../config');
 const User = require('./../../models/User');
 
-
+const SECRET_KEY = process.env.SECRET_KEY;
 
 function generateToken(user) {
     return jwt.sign({
