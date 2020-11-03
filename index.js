@@ -12,6 +12,7 @@ const resolvers = require('./graphql/resolvers/index');
 // instantiate & pass it to the context
 const pubsub = new PubSub();
 
+const MONGODB = process.env.MONGODB;
 const PORT = process.env.PORT || 5000;
 
 // setup Apollo server
